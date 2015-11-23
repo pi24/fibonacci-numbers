@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	long x;	
+	int array[3];
+	array[0] = 0;
+	array[1] = 1;
+	array[2] = 1;	
+	while(array[2] <= 4000000)
+	{
+		array[0] = array[1];
+		array[1] = array[2];		
+		array[2] = array[0] + array[1];
+		if(array[2] % 2 == 0)
+		{
+			x += array[2];
+		}
+	}  
+cout <<x<< endl;
+}
